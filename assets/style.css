@@ -1,0 +1,20 @@
+.jumbotron{
+padding-top: 0px;
+padding-bottom:0px;
+background-image:url('./background-1.jpg');
+
+background-size: cover;
+height:160px;
+}
+h1{
+    font-family: 'Freehand', cursive;
+    padding-top: 25px;
+    color: limegreen;
+    text-shadow: 2px 2px rgb(1, 45, 1) ;
+}
+.lead{
+    font-family: 'Freehand', cursive;
+    font-size: 30px;
+    color: limegreen;
+    text-shadow: 2px 2px rgb(1, 45, 1) ;
+}
