@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cocktails_And_Snacks</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <link rel="stylesheet" href="./assets/style.css">
@@ -15,7 +15,7 @@
 <body>
     <header class="jumbotron jumbotron-fluid">
             <div class="container ">
-              <h1 class="display-4">Coctails and Snacks</h1>
+              <h1 class="display-4">Cocktails and Snacks</h1>
               <p class="lead">This web-site will offer users to pick a coctail and see what snack will go well with it.</p>
             </div>
     </header>
@@ -23,7 +23,7 @@
         <!-- First dropdown button for the coctails -->
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="coctails-btn">Cocktails</button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
@@ -34,6 +34,7 @@
             </div>
             <input type="text" class="form-control" aria-label="Text input with dropdown button">
           </div>
+
           <section class="Question">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -42,15 +43,16 @@
                 <select class="custom-select" id="inputGroupSelect01">
                   <option selected>Choose...</option>
                   <option value="1">Would you like to pick a snack that will go with your coctail?</option>
-                  <option value="2">Would you like the site to pick a snack that will go with your coctail?</option>
+                  <option value="2">Would you like us to pick a snack that will go with your coctail?</option>
                 </select>
               </div>
     
           </section>
         <!-- Second drop down button for meal -->
+        <!-- Second dropdown will be hidden unless user chooses first option -->
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+              <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Snacks</button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
