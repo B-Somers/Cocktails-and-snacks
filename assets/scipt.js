@@ -15,13 +15,13 @@
 //  console.log(data.drinks);
 // });
 
-// var fetchBtn = document.getElementById('coctails-btn');
+var fetchBtn = document.getElementById('coctails-btn');
 
 
 function getApi(){
-var coctailByName = 'www.thecocktaildb.com/api/json/v1/1/search.php?f=a';
+var cocktailByName = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
 
-     fetch(coctailByName)
+     fetch(cocktailByName)
      .then(function(response){
          return response.json();
      }).then(function(data){
@@ -30,4 +30,13 @@ var coctailByName = 'www.thecocktaildb.com/api/json/v1/1/search.php?f=a';
 });
 }
 getApi();
-// fetchBtn.addEventListener('click', getApi);
+fetchBtn.addEventListener('click', getApi);
+
+var button = document.getElementById('click');
+var input = document.getElementById('input');
+button.addEventListener('click',  function(){
+    console.log('working');
+    console.log(input.value);
+    var url='https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + input.value;
+    console.log(url);
+});
