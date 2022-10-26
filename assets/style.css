@@ -9,6 +9,10 @@ background-image:url('./background-1.jpg');
 background-size: cover;
 height:160px;
 }
+.search-container{
+    display: flex;
+    justify-content: center;
+}
 #search-button{
 background-color: limegreen;
 }
@@ -23,5 +27,18 @@ h1{
     font-family: 'Freehand', cursive;
     font-size: 30px;
     color: limegreen;
+    text-shadow: 2px 2px rgb(1, 45, 1) ;
+}
+.generated-food{
+    display: flex;
+    justify-content: space-around;
+}
+#food{
+
+    justify-content: center;
+    background-color: limegreen;
+    font-family: 'Freehand', cursive;
+    font-size: 30px;
+    color: rgb(29, 66, 29);
     text-shadow: 2px 2px rgb(1, 45, 1) ;
 }
