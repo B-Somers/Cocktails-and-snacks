@@ -18,16 +18,9 @@ mealButton.addEventListener('click', () => {
 
 const createMeal = meal => {
 
-	const newInnerHTML = `
-		<div class="row">
-			<div class="columns seven">
-				<h4>${meal.strMeal}</h4>
+	const mealslot = meal.strMeal
 
-			</div>
-		</div>
-	`;
-
-	mealField.innerHTML = newInnerHTML;
+	console.log(mealslot);
 };
 
 // var fetchBtn = document.getElementById('coctails-btn');
