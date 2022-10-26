@@ -9,6 +9,10 @@ background-image:url('./background-1.jpg');
 background-size: cover;
 height:160px;
 }
+#search-button{
+background-color: limegreen;
+}
+
 h1{
     font-family: 'Freehand', cursive;
     padding-top: 25px;

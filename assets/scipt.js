@@ -1,42 +1,54 @@
-// fetch('www.thecocktaildb.com/api/json/v1/1/search.php')
-//                     .then(response => {
-//                       if (response.ok) return response.json()
-//                       throw new Error('Network response was not ok.')
-//                     })
-//                     .then(data => console.log(data.contents));
-
-
-
-// $.getJSON('https://api.allorigins.win/get?url=' + 
-// encodeURIComponent('www.thecocktaildb.com/api/json/v1/1/search.php?f=a'), function (data) {
-// console.log(data);  });
-
-// $.getJSON("www.thecocktaildb.com/api/json/v1/1/search.php?f=a", function(data){
-//  console.log(data.drinks);
-// });
-
-var fetchBtn = document.getElementById('coctails-btn');
+var fetchBtn = document.getElementById('search-button');
+var input = document.getElementById('search-input');
+var results = document.getElementById('results');
+// var searchResults = data.drinks[0];
 
 
 function getApi(){
-var cocktailByName = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
-
+    var cocktailByName = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input.value}`;
      fetch(cocktailByName)
      .then(function(response){
-         return response.json();
-     }).then(function(data){
-   console.log('parsed data!');
-   console.log(data);
+    return response.json();
+     })
+     .then(function(data){
+   console.log(data.drinks);
+//    searchResults = data.drinks;
+//    console.log(searchResults);
+
 });
 }
 getApi();
+
+var cocktailName = document.createElement("ul");
+results.appendChild(cocktailName);  
+
+var getNames = Object.keys(results)
+  .filter(function (drink) {
+    return drink.indexOf("strDrink") == 0;
+  })
+  .reduce(function (data, drinks) {
+    if (cocktail[drinks] != null) {
+      data[drinks] = cocktail[drinks];
+    }
+    return drinks;
+  }, {});
+
+for (let key in getNames) {
+  let value = getIngredients[key];
+  listItem = document.createElement("li");
+  listItem.innerHTML = value;
+  cocktailName.appendChild(listItem);
+}
+    
+
+
+// if(input == input.value){
+// console.log(working)
+// }
+
 fetchBtn.addEventListener('click', getApi);
 
-var button = document.getElementById('click');
-var input = document.getElementById('input');
-button.addEventListener('click',  function(){
-    console.log('working');
-    console.log(input.value);
-    var url='https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + input.value;
-    console.log(url);
-});
+
+
+// results.appendChild(searchResults);
+ document.body.appendChild(results);
