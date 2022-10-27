@@ -64,9 +64,9 @@ var getNames = Object.keys(results)
     return drinks;
   }, {});
 
-
+// This function is for executing search button once
 function addListener(){
-fetchBtn.addEventListener("click", getAndDisplayDrinkResults, {once:true},{if()});
+fetchBtn.addEventListener("click", getAndDisplayDrinkResults, {once:true});
 
 }
 addListener();
