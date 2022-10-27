@@ -32,6 +32,7 @@ h1{
 .generated-food{
     display: flex;
     justify-content: space-around;
+    display: none;
 }
 #food{
 
