@@ -1,6 +1,7 @@
 var fetchBtn = document.getElementById("search-button");
 var input = document.getElementById("search-input");
 var results = document.getElementById("results");
+var food = document.getElementById("food");
 // var searchResults = data.drinks[0];
 
 function getApi() {
@@ -65,7 +66,9 @@ var getNames = Object.keys(results)
 
 
 function addListener(){
-fetchBtn.addEventListener("click", getAndDisplayDrinkResults, {once:true});}
+fetchBtn.addEventListener("click", getAndDisplayDrinkResults, {once:true},{if()});
+
+}
 addListener();
 
 // results.appendChild(searchResults);
