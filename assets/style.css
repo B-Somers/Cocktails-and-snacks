@@ -43,3 +43,6 @@ h1{
     color: rgb(29, 66, 29);
     text-shadow: 2px 2px rgb(1, 45, 1) ;
 }
+#results{
+    list-style-type: none;
+}
