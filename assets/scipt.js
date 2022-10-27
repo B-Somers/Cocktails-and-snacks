@@ -46,27 +46,11 @@ function getAndDisplayDrinkResults() {
       // listItem.classList.add("p-2 ");
       //   listItem.innerHTML = value;
       //   cocktailName.appendChild(listItem);
-    }
-    // listItem = document.createElement("li");
-  }
-  //   console.log(drinks);
-  //   var cocktailName = document.createElement("ul");
-  //   results.appendChild(cocktailName);
-
-  //   //   drinks.foreach();
-  //   let value = getIngredients[key];
-  //   listItem = document.createElement("li");
-  //   listItem.innerHTML = value;
-  //   cocktailName.appendChild(listItem);
+    }}
+  
 }
 
-//   for (let key in getNames) {
-//     let value = getIngredients[key];
-//     listItem = document.createElement("li");
-//     listItem.innerHTML = value;
-//     cocktailName.appendChild(listItem);
-//   }
-// }
+    
 
 var getNames = Object.keys(results)
   .filter(function (drink) {
@@ -79,11 +63,36 @@ var getNames = Object.keys(results)
     return drinks;
   }, {});
 
-// if(input == input.value){
-// console.log(working)
-// }
 
-fetchBtn.addEventListener("click", getAndDisplayDrinkResults);
+function addListener(){
+fetchBtn.addEventListener("click", getAndDisplayDrinkResults, {once:true});}
+addListener();
 
 // results.appendChild(searchResults);
 document.body.appendChild(results);
+// if(createAndAppendDrinkElements()==0){
+//     preventDefoult
+//     }
+
+// }
+  // listItem = document.createElement("li");
+  //   console.log(drinks);
+  //   var cocktailName = document.createElement("ul");
+  //   results.appendChild(cocktailName);
+
+  //   //   drinks.foreach();
+  //   let value = getIngredients[key];
+  //   listItem = document.createElement("li");
+  //   listItem.innerHTML = value;
+  //   cocktailName.appendChild(listItem);
+//   for (let key in getNames) {
+//     let value = getIngredients[key];
+//     listItem = document.createElement("li");
+//     listItem.innerHTML = value;
+//     cocktailName.appendChild(listItem);
+//   }
+// }
+
+// if(input == input.value){
+// console.log(working)
+// }
