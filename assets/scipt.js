@@ -20,9 +20,11 @@ function getApi() {
 getApi();
 
 function getAndDisplayDrinkResults() {
-  var drinks = getApi();
+    //clear results div so response does not duplicate in HTML
+    results.innerHTML = "";
+    var drinks = getApi();
 
-  drinks.then((drinksArray) => {
+    drinks.then((drinksArray) => {
     console.log("The drinks variable is as follows: ");
     console.log(drinksArray);
 
@@ -41,18 +43,19 @@ function getAndDisplayDrinkResults() {
       results.appendChild(cocktailItemEl);
       buttonLi= document.createElement("button");
       buttonLi.textContent = drink;
+      buttonLi.setAttribute("value", drink)
       cocktailItemEl.append(buttonLi);
       
       // cocktailName.appendChild(listItem);
       // listItem.classList.add("p-2 ");
       //   listItem.innerHTML = value;
       //   cocktailName.appendChild(listItem);
+      // target.addEventListener("click", getFoodItem(target.value))
     }}
   
 }
-
     
-
+// Loop through drinks to show requested onces
 var getNames = Object.keys(results)
   .filter(function (drink) {
     return drink.indexOf("strDrink") == 0;
@@ -64,12 +67,14 @@ var getNames = Object.keys(results)
     return drinks;
   }, {});
 
-// This function is for executing search button once
-function addListener(){
-fetchBtn.addEventListener("click", getAndDisplayDrinkResults, {once:true});
 
-}
-addListener();
+fetchBtn.addEventListener("click", getAndDisplayDrinkResults);
+    
+//     {if(food.style.display==='none'){
+//     food.style.display==='block';}
+//     else{ food.style.display==='none'}
+
+
 
 // results.appendChild(searchResults);
 document.body.appendChild(results);
