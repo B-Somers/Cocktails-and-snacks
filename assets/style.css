@@ -29,6 +29,12 @@ h1{
     color: limegreen;
     text-shadow: 2px 2px rgb(1, 45, 1) ;
 }
+#results{
+padding: 5px;
+
+}
+
+
 .generated-food{
     display: flex;
     justify-content: space-around;
@@ -43,6 +49,6 @@ h1{
     color: rgb(29, 66, 29);
     text-shadow: 2px 2px rgb(1, 45, 1) ;
 }
-#results{
+#food{
     list-style-type: none;
 }

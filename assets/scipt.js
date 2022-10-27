@@ -41,6 +41,7 @@ function getAndDisplayDrinkResults() {
       buttonLi= document.createElement("button");
       buttonLi.textContent = drink;
       cocktailItemEl.append(buttonLi);
+      
       // cocktailName.appendChild(listItem);
       // listItem.classList.add("p-2 ");
       //   listItem.innerHTML = value;
