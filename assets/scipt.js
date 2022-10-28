@@ -43,7 +43,8 @@ function getAndDisplayDrinkResults() {
       results.appendChild(cocktailItemEl);
       buttonLi= document.createElement("button");
       buttonLi.textContent = drink;
-      buttonLi.setAttribute("value", drink)
+      buttonLi.setAttribute("value", drink);
+      buttonLi.addEventListener("click", foodApi);
       cocktailItemEl.append(buttonLi);
       
       // cocktailName.appendChild(listItem);
@@ -69,38 +70,38 @@ var getNames = Object.keys(results)
 
 
 fetchBtn.addEventListener("click", getAndDisplayDrinkResults);
-    
+cocktailItemEl.addEventListener("click", )
 //     {if(food.style.display==='none'){
 //     food.style.display==='block';}
 //     else{ food.style.display==='none'}
+//---------------------------------------------------------------
 
 
 
-// results.appendChild(searchResults);
-document.body.appendChild(results);
-// if(createAndAppendDrinkElements()==0){
-//     preventDefoult
-//     }
-
-// }
-  // listItem = document.createElement("li");
-  //   console.log(drinks);
-  //   var cocktailName = document.createElement("ul");
-  //   results.appendChild(cocktailName);
-
-  //   //   drinks.foreach();
-  //   let value = getIngredients[key];
-  //   listItem = document.createElement("li");
-  //   listItem.innerHTML = value;
-  //   cocktailName.appendChild(listItem);
-//   for (let key in getNames) {
-//     let value = getIngredients[key];
-//     listItem = document.createElement("li");
-//     listItem.innerHTML = value;
-//     cocktailName.appendChild(listItem);
-//   }
-// }
-
-// if(input == input.value){
-// console.log(working)
-// }
+// document.body.appendChild(results);
+function foodApi(){
+$.getJSON("www.thecocktaildb.com/api/json/v1/1/search.php?f=a", function(data){
+    console.log(data);
+   });
+  
+   var mealField = document.getElementById('food');
+   
+    
+       fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+           .then(res => res.json())
+           .then(res => {
+               createMeal(res.meals[0]);
+           })
+           .catch(e => {
+               console.warn(e);
+           });
+   
+   
+   const createMeal = meal => {
+   
+       const mealslot = meal.strMeal
+   
+       console.log(mealslot);
+   };
+   var randomMeal = meal[Math.floor(Math.random()*meal.length)];
+}
