@@ -1,4 +1,4 @@
-var fetchBtn = document.getElementById("search-button");
+ fetchBtn = document.getElementById("search-button");
 var input = document.getElementById("search-input");
 var results = document.getElementById("results");
 var food = document.getElementById("food");
@@ -70,22 +70,24 @@ var getNames = Object.keys(results)
 
 
 fetchBtn.addEventListener("click", getAndDisplayDrinkResults);
-cocktailItemEl.addEventListener("click", )
+// cocktailItemEl.addEventListener("click", )
 //     {if(food.style.display==='none'){
 //     food.style.display==='block';}
 //     else{ food.style.display==='none'}
 //---------------------------------------------------------------
 
-
+// foodUrl= document.createElement("p");
+// food.append(foodUrl);
+// listItem.innerHTML = value;
 
 // document.body.appendChild(results);
+var mealField = document.getElementById('food');
+
 function foodApi(){
 $.getJSON("www.thecocktaildb.com/api/json/v1/1/search.php?f=a", function(data){
     console.log(data);
    });
   
-   var mealField = document.getElementById('food');
-   
     
        fetch('https://www.themealdb.com/api/json/v1/1/random.php')
            .then(res => res.json())
@@ -99,9 +101,36 @@ $.getJSON("www.thecocktaildb.com/api/json/v1/1/search.php?f=a", function(data){
    
    const createMeal = meal => {
    
-       const mealslot = meal.strMeal
-   
-       console.log(mealslot);
+       
+      const mealslot = meal.strMeal
+      food.innerHTML="";
+       
+        var foodUrl= document.createElement("p");
+       food.append(foodUrl);
+       foodUrl.textContent = mealslot;
+       
+      
+       
+       //  const heading = document.createElement("h1");
+       //  heading.innerHTML = cocktailName;
+       // cocktailDiv.appendChild(heading);
+      console.log(mealslot);
    };
-   var randomMeal = meal[Math.floor(Math.random()*meal.length)];
+//    var randomMeal = mealslot[Math.floor(Math.random() * mealslot.length)];
 }
+foodApi
+
+// #experiment{
+//   justify-content: space-around;
+//   background-color: limegreen;
+//   font-family: 'Freehand', cursive;
+//   font-size: 25px;
+//   color: rgb(255, 89, 0);
+//   text-shadow: 2px 2px rgb(1, 45, 1) ;
+//   width: 80%;
+//   box-shadow: 5px 5px 5px yellow;
+//   border-radius: 12px;
+//   border-color: limegreen;
+// }------------styling for buttons
+
+// 
