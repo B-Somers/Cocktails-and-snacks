@@ -2,6 +2,8 @@
 var input = document.getElementById("search-input");
 var results = document.getElementById("results");
 var food = document.getElementById("food");
+
+
 // var searchResults = data.drinks[0];
 
 function getApi() {
@@ -36,6 +38,7 @@ function getAndDisplayDrinkResults() {
       let drink = drinksArray[i].strDrink;
       //   console.log(drink.strDrink);
       console.log(drink);
+      
 
       //   var cocktailName = document.createElement("ul");
       cocktailItemEl = document.createElement("li");
@@ -66,10 +69,16 @@ var getNames = Object.keys(results)
       data[drinks] = cocktail[drinks];
     }
     return drinks;
+    
+
+   
+
+
   }, {});
 
-
 fetchBtn.addEventListener("click", getAndDisplayDrinkResults);
+
+
 // cocktailItemEl.addEventListener("click", )
 //     {if(food.style.display==='none'){
 //     food.style.display==='block';}
@@ -120,17 +129,49 @@ $.getJSON("www.thecocktaildb.com/api/json/v1/1/search.php?f=a", function(data){
 }
 foodApi
 
-// #experiment{
-//   justify-content: space-around;
-//   background-color: limegreen;
-//   font-family: 'Freehand', cursive;
-//   font-size: 25px;
-//   color: rgb(255, 89, 0);
-//   text-shadow: 2px 2px rgb(1, 45, 1) ;
-//   width: 80%;
-//   box-shadow: 5px 5px 5px yellow;
-//   border-radius: 12px;
-//   border-color: limegreen;
-// }------------styling for buttons
 
-// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//const list = document.getElementById("results")
+
+//let.list = document.createElement()
+
+
+
+
+
+
+//var resultStyle = document.getElementById("results")
+//resultStyle.setAttribute("style", "justifyContent: space-around;
+//   background-color: limegreen;")
+
+//style.innerHTML = "#drinks (background-color:red)"
+
+
+
+
+ //  justify-content: space-around;
+ //  background-color: limegreen;
+ //  font-family: 'Freehand', cursive;
+ //  font-size: 25px;
+ //  color: rgb(255, 89, 0);
+ //  text-shadow: 2px 2px rgb(1, 45, 1) ;
+ //  width: 80%;
+ //  box-shadow: 5px 5px 5px yellow;
+ //  border-radius: 12px;
+ //  border-color: limegreen;
