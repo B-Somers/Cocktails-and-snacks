@@ -33,8 +33,7 @@ www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
 www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink
 www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail
 
-
-        Images
+   Images
 
     Drink thumbnails
 Add /preview to the end of the cocktail image URL
