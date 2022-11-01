@@ -13,9 +13,19 @@ height:160px;
     display: flex;
     justify-content: center;
 }
-#search-button{
-background-color: limegreen;
+
+#search-input{ /*added by ethan*/
+    border-radius: 10px; /*added by ethan*/
+    width: 700px; /*added by ethan*/
 }
+
+#search-button{
+    background-color: rgb(20 155 40 / 67%); /*added by ethan*/
+    color:white; /*added by ethan*/
+    border-radius: 25px; /*added by ethan*/
+    margin-left: 10px; /*added by ethan*/
+}
+
 
 h1{
     font-family: 'Freehand', cursive;
@@ -36,9 +46,10 @@ padding: 5px;
  
 
 #results button {
+    display:flex;
     justify-content: space-around;
    background-color: limegreen;
-   font-family: 'Freehand', cursive;
+   font-family: 'Caveat', cursive;
    font-size: 25px;
    color: rgb(255, 89, 0);
    text-shadow: 2px 2px rgb(1, 45, 1) ;
@@ -56,14 +67,14 @@ padding: 5px;
     /* display: none; */
 }
 #food{
-
     justify-content: center;
-    background-color: limegreen;
-    font-family: 'Freehand', cursive;
+    /* background-color: limegreen; */
+    font-family: 'Caveat', cursive;
     font-size: 30px;
     color: rgb(29, 66, 29);
-    text-shadow: 2px 2px rgb(1, 45, 1) ;
+    /* text-shadow: 2px 2px rgb(1, 45, 1) ; */  /* removed the text shadow at the bottom of page added by ethan*/
 }
+
 #food{
     list-style-type: none;
 }

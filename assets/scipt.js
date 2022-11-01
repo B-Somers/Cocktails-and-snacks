@@ -2,8 +2,6 @@
 var input = document.getElementById("search-input");
 var results = document.getElementById("results");
 var food = document.getElementById("food");
-
-
 // var searchResults = data.drinks[0];
 
 function getApi() {
@@ -39,7 +37,6 @@ function getAndDisplayDrinkResults() {
       //   console.log(drink.strDrink);
       console.log(drink);
       
-
       //   var cocktailName = document.createElement("ul");
       cocktailItemEl = document.createElement("li");
     //   cocktailItemEl.innerHTML = drink;
@@ -48,6 +45,7 @@ function getAndDisplayDrinkResults() {
       buttonLi.textContent = drink;
       buttonLi.setAttribute("value", drink);
       buttonLi.addEventListener("click", foodApi);
+      buttonLi.style.margin = "15px auto"
       cocktailItemEl.append(buttonLi);
       
       // cocktailName.appendChild(listItem);
@@ -69,16 +67,10 @@ var getNames = Object.keys(results)
       data[drinks] = cocktail[drinks];
     }
     return drinks;
-    
-
-   
-
-
   }, {});
 
-fetchBtn.addEventListener("click", getAndDisplayDrinkResults);
 
-
+  fetchBtn.addEventListener("click", getAndDisplayDrinkResults);
 // cocktailItemEl.addEventListener("click", )
 //     {if(food.style.display==='none'){
 //     food.style.display==='block';}
@@ -109,14 +101,13 @@ $.getJSON("www.thecocktaildb.com/api/json/v1/1/search.php?f=a", function(data){
    
    
    const createMeal = meal => {
-   
-       
       const mealslot = meal.strMeal
       food.innerHTML="";
        
         var foodUrl= document.createElement("p");
        food.append(foodUrl);
-       foodUrl.textContent = mealslot;
+       foodUrl.textContent = "This food item would go well with your drink :" + " " + mealslot;
+      //  foodUrl.textContent = mealslot;
        
       
        
