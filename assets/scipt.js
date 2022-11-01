@@ -2,7 +2,9 @@
 var input = document.getElementById("search-input");
 var results = document.getElementById("results");
 var food = document.getElementById("food");
-var storageText = document.getElementById("storage-text")
+var storageText = document.querySelector("last-search")
+
+
 // var searchResults = data.drinks[0];
 
 function getApi() {
@@ -36,7 +38,7 @@ function getAndDisplayDrinkResults() {
     for (let i = 0; i < drinksArray.length; i++) {
       let drink = drinksArray[i].strDrink;
       //   console.log(drink.strDrink);
-      console.log(drink);
+     //console.log(drink);
       
       //   var cocktailName = document.createElement("ul");
       cocktailItemEl = document.createElement("li");
@@ -68,18 +70,33 @@ var getNames = Object.keys(results)
       data[drinks] = cocktail[drinks];
     }
     return drinks;
+
+    
   }, {});
+  
+
+
+
+
+
+
+
 
   //LOCAL STORAGE FUNCTION
 function lastSearch(){
-  var storage = localStorage.getItem(data.drinks)
-  console.log(data.drinks);
-  // lastSearch.setItem('inputstorage', input.textContent)
-  localStorage.setItem('input', drinksArray)
-  console.log(drinksArray)
+  var storage = localStorage.getItem("input")
+  //console.log(data.drinks);
+  //storageText.textContent = drinks;
+}
+   //lastSearch.setItem('inputstorage', input.textContent)
+   var drinkSearch = document.getElementById("drink-search")
+  localStorage.setItem('input', drinkSearch)
+  console.log(drinkSearch);
+  lastSearch();
 
 
 
+//
   fetchBtn.addEventListener("click", getAndDisplayDrinkResults);
   var mealField = document.getElementById('food');
 
@@ -113,7 +130,7 @@ $.getJSON("www.thecocktaildb.com/api/json/v1/1/search.php?f=a", function(data){
        //  const heading = document.createElement("h1");
        //  heading.innerHTML = cocktailName;
        // cocktailDiv.appendChild(heading);
-      console.log(mealslot);
+      console.log(mealslot)
    };
 //    var randomMeal = mealslot[Math.floor(Math.random() * mealslot.length)];
 }
