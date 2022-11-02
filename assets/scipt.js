@@ -1,8 +1,9 @@
- fetchBtn = document.getElementById("search-button");
+var fetchBtn = document.getElementById("search-button");
 var input = document.getElementById("search-input");
 var results = document.getElementById("results");
 var food = document.getElementById("food");
 var storageText = document.getElementById("storage-text")
+var lastSearched = document.getElementById("last-search");
 // var searchResults = data.drinks[0];
 
 function getApi() {
@@ -23,6 +24,13 @@ getApi();
 function getAndDisplayDrinkResults() {
     //clear results div so response does not duplicate in HTML
     results.innerHTML = "";
+
+    // grabbing the value of the input field
+    var textValue = input.value;
+    console.log(textValue);
+
+    localStorage.setItem("search", textValue);
+
     var drinks = getApi();
 
     drinks.then((drinksArray) => {
@@ -70,13 +78,14 @@ var getNames = Object.keys(results)
     return drinks;
   }, {});
 
-  //LOCAL STORAGE FUNCTION
-function lastSearch(){
-  var storage = localStorage.getItem(data.drinks)
-  console.log(data.drinks);
-  // lastSearch.setItem('inputstorage', input.textContent)
-  localStorage.setItem('input', drinksArray)
-  console.log(drinksArray)
+  // //LOCAL STORAGE FUNCTION
+  // function lastSearch(){
+  // var storage = localStorage.getItem(data.drinks)
+  // console.log(data.drinks);}
+  // // lastSearch.setItem('inputstorage', input.textContent)
+  // localStorage.setItem('input', value)
+  // console.log()
+  // lastSearch();
 
 
 
@@ -117,6 +126,8 @@ $.getJSON("www.thecocktaildb.com/api/json/v1/1/search.php?f=a", function(data){
    };
 //    var randomMeal = mealslot[Math.floor(Math.random() * mealslot.length)];
 }
-foodApi
+foodApi();
 
 
+var searchedItem = localStorage.getItem("search");
+lastSearched.textContent = searchedItem;
